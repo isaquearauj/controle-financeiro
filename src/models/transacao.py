@@ -1,5 +1,6 @@
-from models.categoria import  Categoria
 from datetime import datetime
+
+from models.categoria import  Categoria
 
 class Transacao:
     id: int
