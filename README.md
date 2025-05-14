@@ -23,6 +23,7 @@ Aplicativo de linha de comando desenvolvido em Python para gerenciar finanças p
 - Manipulação de arquivos: JSON, CSV
 - Manipulação de datas (`datetime`)
 - Geradores, decoradores, exceções
+- Anotações de tipo (type hints)
 - `pip-tools` para gestão de dependências
 
 ---
