@@ -26,6 +26,7 @@ Aplicativo de linha de comando desenvolvido em Python para gerenciar finanças p
 
 - Python 3.10+
 - Programação Orientada a Objetos
+- Tratamento de Exceções
 - Manipulação de arquivos: JSON, CSV
 - Manipulação de datas (`datetime`)
 - Geradores, decoradores, exceções
@@ -36,6 +37,7 @@ Aplicativo de linha de comando desenvolvido em Python para gerenciar finanças p
 
 ## 📂 Estrutura do Projeto
 
+```
 controle-financeiro/
 │
 ├── data/                      # Armazena os dados persistidos dos usuários em JSON
@@ -73,6 +75,7 @@ controle-financeiro/
 │
 ├── .gitignore                 # Ignora arquivos desnecessários
 └── README.md                  # Documentação principal do projeto
+```
 
 ---
 
@@ -90,7 +93,7 @@ source .venv/bin/activate     # Linux/Mac
 .venv\Scripts\activate        # Windows
 ```
 
-### 4. Executar
+### 3. Executar
 ```bash
 python src/main.py
 ```
