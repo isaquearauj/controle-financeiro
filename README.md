@@ -26,7 +26,6 @@ Aplicativo de linha de comando desenvolvido em Python para gerenciar finanças p
 
 - Python 3.10+
 - Programação Orientada a Objetos
-- Tratamento de Exceções
 - Manipulação de arquivos: JSON, CSV
 - Manipulação de datas (`datetime`)
 - Geradores, decoradores, exceções
