@@ -87,7 +87,8 @@ def usuario_ja_existe(username) -> bool:
 def selecionar_usuario_existente():
     username: str = input("Digite seu username: ")
     username = username.lower().replace(" ", "_")
-    return Persistencia.carregar(username)
+    if usuario_ja_existe(username):
+        return Persistencia.carregar(username)
 
 @Decoradores.log_usuario("Saldo consultado")
 def mostrar_saldo(usuario: Usuario) -> None:
