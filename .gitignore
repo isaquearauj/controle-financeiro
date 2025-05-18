@@ -26,9 +26,6 @@ reports/
 .DS_Store
 Thumbs.db
 
-# pip-tools lock cache (se existir)
-*.txt~
-
 # Ferramentas de análise estática
 .mypy_cache/
 .pytype/

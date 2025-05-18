@@ -1,8 +1,19 @@
 from enum import Enum
 
-class Categoria(Enum):
-    ALIMENTACAO = "ALIMENTACAO"
+class CategoriaReceita(Enum):
+    SALARIO = "SALÁRIO"
+    OUTROS = "OUTROS"
+
+    @classmethod
+    def listar_categorias(cls) -> list[str]:
+        return [categoria.value for categoria in cls]
+
+class CategoriaDespesa(Enum):
+    ALIMENTACAO = "ALIMENTAÇÃO"
     TRANSPORTE = "TRANSPORTE"
     LAZER = "LAZER"
-    SALARIO = "SALARIO"
     OUTROS = "OUTROS"
+
+    @classmethod
+    def listar_categorias(cls) -> list[str]:
+        return [categoria.value for categoria in cls]

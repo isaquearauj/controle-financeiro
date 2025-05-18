@@ -1,15 +1,15 @@
 from datetime import datetime
 
-from models.categoria import  Categoria
+from models.categoria import CategoriaReceita, CategoriaDespesa
 
 class Transacao:
     id: int
     valor: float
     tipo: str
-    categoria: Categoria
+    categoria: CategoriaReceita | CategoriaDespesa
     data: datetime
 
-    def __init__(self, id: int, valor: float, tipo: str, categoria: Categoria, data: datetime):
+    def __init__(self, id: int, valor: float, tipo: str, categoria: CategoriaReceita | CategoriaDespesa, data: datetime):
         self.id = id
         self.valor = valor
         self.tipo = tipo
@@ -19,8 +19,8 @@ class Transacao:
     def to_dict(self) -> dict:
         return {
             "id": self.id,
-            "valor": self.valor,
             "tipo": self.tipo,
+            "valor": self.valor,
             "categoria": self.categoria.value,
             "data": self.data.isoformat()
         }

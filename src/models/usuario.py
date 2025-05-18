@@ -1,7 +1,7 @@
 from datetime import date
 
 from models.transacao import Transacao
-from models.categoria import Categoria
+from models.categoria import CategoriaReceita, CategoriaDespesa
 
 class Usuario:
     id: int
@@ -19,7 +19,7 @@ class Usuario:
     def listar_transacoes(self) -> list[Transacao]:
         return self.transacoes
 
-    def listar_por_categoria(self, c: Categoria) -> list[Transacao]:
+    def listar_por_categoria(self, c: CategoriaReceita | CategoriaDespesa) -> list[Transacao]:
         resultado: list[Transacao] = []
         for t in self.transacoes:
             if t.categoria == c:
@@ -29,7 +29,7 @@ class Usuario:
     def listar_por_data(self, data: date) -> list[Transacao]:
         resultado: list[Transacao] = []
         for t in self.transacoes:
-            if t.data.date() == data.date():
+            if t.data.date() == data:
                 resultado.append(t)
         return resultado
     
